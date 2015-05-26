@@ -10,6 +10,10 @@
 		BAD8A3B71B134025005589E6 /* Monad.h in Headers */ = {isa = PBXBuildFile; fileRef = BAD8A3B61B134025005589E6 /* Monad.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAD8A3BD1B134025005589E6 /* Monad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD8A3B11B134025005589E6 /* Monad.framework */; };
 		BAD8A3C41B134025005589E6 /* MonadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3C31B134025005589E6 /* MonadTests.swift */; };
+		BAD8A3CE1B1340AE005589E6 /* IdentityMonad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3CD1B1340AE005589E6 /* IdentityMonad.swift */; };
+		BAD8A3D01B136F7A005589E6 /* Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3CF1B136F7A005589E6 /* Monoid.swift */; };
+		BAD8A3D21B136FFD005589E6 /* MonoidalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3D11B136FFD005589E6 /* MonoidalCategory.swift */; };
+		BAD8A3D61B1463F4005589E6 /* MaybeMonad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3D51B1463F4005589E6 /* MaybeMonad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		BAD8A3BC1B134025005589E6 /* MonadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD8A3C21B134025005589E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD8A3C31B134025005589E6 /* MonadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonadTests.swift; sourceTree = "<group>"; };
+		BAD8A3CD1B1340AE005589E6 /* IdentityMonad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityMonad.swift; sourceTree = "<group>"; };
+		BAD8A3CF1B136F7A005589E6 /* Monoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monoid.swift; sourceTree = "<group>"; };
+		BAD8A3D11B136FFD005589E6 /* MonoidalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonoidalCategory.swift; sourceTree = "<group>"; };
+		BAD8A3D51B1463F4005589E6 /* MaybeMonad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaybeMonad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,10 @@
 			children = (
 				BAD8A3B61B134025005589E6 /* Monad.h */,
 				BAD8A3B41B134025005589E6 /* Supporting Files */,
+				BAD8A3CD1B1340AE005589E6 /* IdentityMonad.swift */,
+				BAD8A3CF1B136F7A005589E6 /* Monoid.swift */,
+				BAD8A3D11B136FFD005589E6 /* MonoidalCategory.swift */,
+				BAD8A3D51B1463F4005589E6 /* MaybeMonad.swift */,
 			);
 			path = Monad;
 			sourceTree = "<group>";
@@ -209,6 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD8A3CE1B1340AE005589E6 /* IdentityMonad.swift in Sources */,
+				BAD8A3D61B1463F4005589E6 /* MaybeMonad.swift in Sources */,
+				BAD8A3D01B136F7A005589E6 /* Monoid.swift in Sources */,
+				BAD8A3D21B136FFD005589E6 /* MonoidalCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +339,7 @@
 		BAD8A3C81B134025005589E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -332,12 +349,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BAD8A3C91B134025005589E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -399,6 +418,7 @@
 				BAD8A3C91B134025005589E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAD8A3CA1B134025005589E6 /* Build configuration list for PBXNativeTarget "MonadTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +427,7 @@
 				BAD8A3CC1B134025005589E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
