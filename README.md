@@ -1,7 +1,7 @@
 # SwiftMonad
 
 
-This is not a Library, is only Pedagogical materials to help explain and understand, what is a Monad and How it could implmented in Swift.
+This is not a Library, is only pedagogical materials to help explain and understand, what is a Monad and How it could implmented in Swift.
 
 - Monoid
 - MonoidalCategory
