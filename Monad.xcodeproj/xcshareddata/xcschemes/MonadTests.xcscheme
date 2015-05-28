@@ -9,20 +9,6 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BAD8A3B01B134025005589E6"
-               BuildableName = "Monad.framework"
-               BlueprintName = "Monad"
-               ReferencedContainer = "container:Monad.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BAD8A3B01B134025005589E6"
-            BuildableName = "Monad.framework"
-            BlueprintName = "Monad"
+            BlueprintIdentifier = "BAD8A3BB1B134025005589E6"
+            BuildableName = "MonadTests.xctest"
+            BlueprintName = "MonadTests"
             ReferencedContainer = "container:Monad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +61,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BAD8A3B01B134025005589E6"
-            BuildableName = "Monad.framework"
-            BlueprintName = "Monad"
+            BlueprintIdentifier = "BAD8A3BB1B134025005589E6"
+            BuildableName = "MonadTests.xctest"
+            BlueprintName = "MonadTests"
             ReferencedContainer = "container:Monad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +79,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BAD8A3B01B134025005589E6"
-            BuildableName = "Monad.framework"
-            BlueprintName = "Monad"
+            BlueprintIdentifier = "BAD8A3BB1B134025005589E6"
+            BuildableName = "MonadTests.xctest"
+            BlueprintName = "MonadTests"
             ReferencedContainer = "container:Monad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
