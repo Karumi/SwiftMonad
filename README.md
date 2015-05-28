@@ -1,5 +1,6 @@
 # SwiftMonad
 
+[![Build Status](https://travis-ci.org/Karumi/SwiftMonad.svg?branch=master)](https://travis-ci.org/Karumi/SwiftMonad)
 
 This is not a Library, is only pedagogical materials to help explain and understand, what is a Monad and How it could implmented in Swift.
 
