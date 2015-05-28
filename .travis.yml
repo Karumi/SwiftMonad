@@ -1,3 +1,4 @@
 language: objective-c
 xcode_project: Monad.xcodeproj
 xcode_scheme: MonadTests
+xcode_sdk: iphonesimulator
