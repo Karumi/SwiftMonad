@@ -10,43 +10,22 @@ import Foundation
 
 
 // Monoid
-struct Monoid<T> {
-    let f: T -> T
-    let g: T -> T
-    
-    /*
-    * Function Composition
-    */
-    func compose(a:T) -> T {
-        return g(f(a))
-    }
-}
-
 /*
- * Functions under composition is a Monoid
+ * Reference wikipedia: http://en.wikipedia.org/wiki/Monoid
+ * Associativity
+ * For all a, b and c in S, the equation (f • g) • h = f • (g • h) holds.
+ *
+ * Identity element
+ * There exists an element e in S such that for every element a in S, the equations e • a = a • e = a hold
  */
-struct TwoParamFuncMonoid<T> {
-    let unit: T // Or Idenity
-    //Set of things
-    let f: (T, T) -> T
-    let g: (T, T) -> T
+struct Monoid<T> {
+    let unit: T -> T // Or Idenity
     
     /*
-    * Rule for combining the things
-    * Meta rule:
-    * 1) associativity of func
-    * 2) has unit
+    * Function Composition or •
     */
-    func compose(#x:T, y:T) -> T {
-        return g(f(x,y), unit)
+    func compose(#f: T -> T, g: T -> T) -> T -> T {
+        return { g(f($0)) }
     }
 }
 
-func main() {
-    let a = 1
-    let m = Monoid(f: {$0 + 1}, g: {$0 * 3})
-    m.compose(a)
-    
-    let clock = TwoParamFuncMonoid(unit: 12, f: {$0 + $1}, g: {$0 % $1})
-    clock.compose(x: 10, y: 5) //expected 3
-}

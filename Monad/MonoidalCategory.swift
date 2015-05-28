@@ -8,14 +8,11 @@
 
 import Foundation
 
-struct MonoidalCategory<T, U, V> {
-    let f: T -> U
-    let g: U -> V
-    
+struct MonoidalCategory<T, U, V> {   
     /*
-    * Function Composition
+    * Function Composition or •
     */
-    func h(a:T) -> V {
-        return g(f(a))
+    func compose(#f: T -> U, g: U -> V) -> T -> V {
+        return { g(f($0)) }
     }
 }

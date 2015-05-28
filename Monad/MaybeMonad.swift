@@ -45,12 +45,3 @@ enum MaybeMonad<T> {
     }
     
 }
-
-func main3() {
-    let i:Int? = 0
-    // Using map to optionaly execute the func successor
-    let i1:Int = (i?.successor())!
-    
-    let j:MaybeMonad<Int> = MaybeMonad(0)
-    let j1:Int = j.map({$0.successor()}).unwrap()
-}
