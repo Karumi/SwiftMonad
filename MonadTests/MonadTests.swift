@@ -58,4 +58,36 @@ class MonadTests: XCTestCase {
         let j1:Int = j.map({$0.successor()}).unwrap()
         XCTAssertEqual(1, j1)
     }
+    
+    private func nserrorToRight<T>(value: T?) -> EitherMonad<T, NSError> {
+        if let v = value {
+            return EitherMonad.Left(v)
+        } else {
+            return EitherMonad.Right(NSError(domain: "com.karumi.MonadTests", code: 0, userInfo: nil))
+        }
+    }
+    
+    func testEitherMonad() {
+        var s:String? = "hello"
+        
+        nserrorToRight(s).match(
+            left: { (value:String) -> String in
+                print(value)
+                return value
+            },
+            right: { NSLog($0.localizedDescription) }
+        )
+        // prints "HELLO"
+
+        s = nil
+
+        nserrorToRight(s).match(
+            left: { print($0) },
+            right: { (error:NSError) -> NSError in
+                NSLog(error.localizedDescription)
+                return error
+            }
+        )
+        // Log in the Console NSError
+    }
 }
