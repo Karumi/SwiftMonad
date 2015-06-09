@@ -30,7 +30,7 @@ enum MaybeMonad<T> {
         switch self {
             case let .Some(value):
                 return MaybeMonad<U>(f(value))
-            case let .None:
+            case .None:
                 return MaybeMonad<U>()
         }
     }
@@ -39,7 +39,7 @@ enum MaybeMonad<T> {
         switch self {
             case let .Some(value):
                 return value
-            case let .None:
+            case .None:
                 fatalError("unwrapping a nil value")
         }
     }

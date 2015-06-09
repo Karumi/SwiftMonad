@@ -24,7 +24,7 @@ struct Monoid<T> {
     /*
     * Function Composition or •
     */
-    func compose(#f: T -> T, g: T -> T) -> T -> T {
+    func compose(f f: T -> T, g: T -> T) -> T -> T {
         return { g(f($0)) }
     }
 }

@@ -33,7 +33,7 @@ class MonadTests: XCTestCase {
     }
     
     func testMonoidalCategory() {
-        let m = MonoidalCategory<Int, String, [Character]>()
+        let m = MonoidalCategory()
         XCTAssertEqual(["4", "7"], m.compose(f: {"\($0)"}, g: {Array($0)})(47))
     }
     
@@ -45,15 +45,17 @@ class MonadTests: XCTestCase {
 
         XCTAssertEqual(result1.value, result2.value)
         
-        IdentityMonad(value: "Hello World").bind(println)
+        IdentityMonad(value: "Hello World").bind(print)
     }
     
     func testMaybeMonad() {
         let i:Int? = 0
         // Using map to optionaly execute the func successor
         let i1:Int = (i?.successor())!
+        XCTAssertEqual(1, i1)
         
         let j:MaybeMonad<Int> = MaybeMonad(0)
         let j1:Int = j.map({$0.successor()}).unwrap()
+        XCTAssertEqual(1, j1)
     }
 }
