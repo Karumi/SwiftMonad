@@ -34,7 +34,7 @@ class MonadTests: XCTestCase {
     
     func testMonoidalCategory() {
         let m = MonoidalCategory()
-        XCTAssertEqual(["4", "7"], m.compose(f: {"\($0)"}, g: {Array($0)})(47))
+        XCTAssertEqual(["47"], m.compose(f: {"\($0)"}, g: { [$0] })(47))
     }
     
     func testIdentityMonad() {
@@ -45,7 +45,7 @@ class MonadTests: XCTestCase {
 
         XCTAssertEqual(result1.value, result2.value)
         
-        IdentityMonad(value: "Hello World").bind(print)
+        IdentityMonad(value: "Hello World").bind({$0.stringByReplacingOccurrencesOfString("World", withString: "Everybody!")})
     }
     
     func testMaybeMonad() {

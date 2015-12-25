@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3A00F11B62275400391BB4 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3A00F01B62275400391BB4 /* List.swift */; };
 		6B74B57A1B281A4A00EFBEEB /* Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B74B5791B281A4A00EFBEEB /* Monad.swift */; };
 		6B7C7DCB1B171F4600C83619 /* EitherMonad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7C7DCA1B171F4600C83619 /* EitherMonad.swift */; };
 		6B7C7DCC1B171F4600C83619 /* EitherMonad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7C7DCA1B171F4600C83619 /* EitherMonad.swift */; };
@@ -14,6 +15,7 @@
 		6BB9A8061B160E2600B1EEE3 /* Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3CF1B136F7A005589E6 /* Monoid.swift */; };
 		6BB9A8071B160E2600B1EEE3 /* MonoidalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3D11B136FFD005589E6 /* MonoidalCategory.swift */; };
 		6BB9A8081B160E2600B1EEE3 /* MaybeMonad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3D51B1463F4005589E6 /* MaybeMonad.swift */; };
+		6BC489DB1B2C422A006DEFCA /* IOMonad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC489DA1B2C422A006DEFCA /* IOMonad.swift */; };
 		BAD8A3B71B134025005589E6 /* Monad.h in Headers */ = {isa = PBXBuildFile; fileRef = BAD8A3B61B134025005589E6 /* Monad.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAD8A3BD1B134025005589E6 /* Monad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD8A3B11B134025005589E6 /* Monad.framework */; };
 		BAD8A3C41B134025005589E6 /* MonadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD8A3C31B134025005589E6 /* MonadTests.swift */; };
@@ -34,8 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B3A00F01B62275400391BB4 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		6B74B5791B281A4A00EFBEEB /* Monad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monad.swift; sourceTree = "<group>"; };
 		6B7C7DCA1B171F4600C83619 /* EitherMonad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherMonad.swift; sourceTree = "<group>"; };
+		6BC489DA1B2C422A006DEFCA /* IOMonad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOMonad.swift; sourceTree = "<group>"; };
 		BAD8A3B11B134025005589E6 /* Monad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Monad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD8A3B51B134025005589E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD8A3B61B134025005589E6 /* Monad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Monad.h; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		BAD8A3B31B134025005589E6 /* Monad */ = {
 			isa = PBXGroup;
 			children = (
+				6B3A00F01B62275400391BB4 /* List.swift */,
 				6B74B5791B281A4A00EFBEEB /* Monad.swift */,
 				BAD8A3B61B134025005589E6 /* Monad.h */,
 				BAD8A3B41B134025005589E6 /* Supporting Files */,
@@ -96,6 +101,7 @@
 				BAD8A3D11B136FFD005589E6 /* MonoidalCategory.swift */,
 				BAD8A3D51B1463F4005589E6 /* MaybeMonad.swift */,
 				6B7C7DCA1B171F4600C83619 /* EitherMonad.swift */,
+				6BC489DA1B2C422A006DEFCA /* IOMonad.swift */,
 			);
 			path = Monad;
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B7C7DCB1B171F4600C83619 /* EitherMonad.swift in Sources */,
+				6B3A00F11B62275400391BB4 /* List.swift in Sources */,
 				6B74B57A1B281A4A00EFBEEB /* Monad.swift in Sources */,
+				6BC489DB1B2C422A006DEFCA /* IOMonad.swift in Sources */,
 				BAD8A3CE1B1340AE005589E6 /* IdentityMonad.swift in Sources */,
 				BAD8A3D61B1463F4005589E6 /* MaybeMonad.swift in Sources */,
 				BAD8A3D01B136F7A005589E6 /* Monoid.swift in Sources */,
@@ -304,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -346,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
