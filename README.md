@@ -1,4 +1,4 @@
-# SwiftMonad
+# ![Karumi logo][karumilogo] SwiftMonad
 
 [![Build Status](https://travis-ci.org/Karumi/SwiftMonad.svg?branch=master)](https://travis-ci.org/Karumi/SwiftMonad)
 
@@ -22,3 +22,5 @@ Also you will find usage of these classes in the tests implementation.
 Please, do it! We'd like to improve this library with your help :)
 - Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug.
 - Fork the repository on GitHub to start making your changes to the master branch (or branch off of it) and send us a pull request.
+
+[karumilogo]: https://cloud.githubusercontent.com/assets/858090/11626547/e5a1dc66-9ce3-11e5-908d-537e07e82090.png
